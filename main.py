@@ -3,6 +3,7 @@ from random import randint
 from PyQt5.QtGui import QPainter, QColor, QPen
 from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
 from PyQt5 import uic
+import random
 
 SCREEN_SIZE = [500, 500]
 
@@ -25,7 +26,7 @@ class MyWidget(QWidget):
         d = randint(3, 200)
         heigh, width = randint(0, 300 - d), randint(0, 300 - d)
 
-        qp.setPen(QPen(QColor(255, 255, 0), 4))
+        qp.setPen(QPen(QColor(randint(0, 255), randint(0, 255), randint(0, 255)), 4))
 
         qp.drawEllipse(heigh, width, d, d)
 
