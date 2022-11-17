@@ -25,8 +25,7 @@ class MyWidget(QWidget):
     def draw_star(self, qp):
         d = randint(3, 200)
         heigh, width = randint(0, 300 - d), randint(0, 300 - d)
-
-        qp.setPen(QPen(QColor(randint(0, 255), randint(0, 255), randint(0, 255)), 4))
+        qp.setPen(QPen(QColor(randint(0, 256), randint(0, 256), randint(0, 256)), 4))
 
         qp.drawEllipse(heigh, width, d, d)
 
